@@ -4,7 +4,7 @@
     m = n.getMonth() + 1;
     d = n.getDate();
     document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
-
+//*
 
     const btn = document.querySelector(".btn-toggle");
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
