@@ -1,3 +1,7 @@
+a{
+  cursor: pointer;
+  }
+
 body {
     font-size: 12px;
     color: white;
@@ -25,10 +29,10 @@ body {
     font-size: 20px;
  }
 }
-@font-face {
+/* @font-face {
   font-family:"TopazPlus";
   src: url(topazplus120010.ttf);
-}
+} */
 .center {
   margin: auto;
   width: 70%;
@@ -38,10 +42,10 @@ body {
   color: #DDDDDD;
   /* color: #c5c8c6; */
   /*background-color: #0d0d18;*/
-  background-color: black;
+  background-color: #111;
 }
 pre {
-  font-family:"TopazPlus", "Lucida Console", monospace, Monaco;
+  font-family:"Lato", "sans-serif", monospace, Monaco;
 }
 a {
   color: #54d7f9;
@@ -49,157 +53,159 @@ a {
 }
 
 line1 {
-  color: #bc0743
+  color: #23272A
 }
 line2 {
-  color: #bb005e
+  color: #2A303A
 }
 line3 {
-  color: #b21679
+  color: #2F3644
 }
 line4 {
-  color: #a12c92
+  color: #343C4E
 }
 line5 {
-  color: #873fa8
+  color: #384157
 }
 line6 {
-  color: #624eba
+  color: #3D4863
 }
 line7 {
-  color: #145bc5
+  color: #434F71
+}
+line8 {
+  color: #47547B
+}
+line9 {
+  color: #4D5B88
+}
+line10 {
+  color: #536396
+}
+line11 {
+  color: #586AA2
+}
+line12 {
+  color: #5F72B0
+}
+line13 {
+  color: #6377BA
+}
+line14 {
+  color: #677CC2
+}
+line15 {
+  color: #6A80C9
+}
+line16 {
+  color: #6D83CF
 }
 
-
-
-ik {
-  color: #20C20E;
-}
-y {
-  color: #f0c674;
-}
-gr {
-  color: #b5bd68;
-}
-r {
-  color: #9e0034;
-}
-w {
-  color: #ffffff;
-}
-pink {
-  color: #f4b6e5;
-}
-bb {
-  color: #5cc2ca; /* baby blue */
-}
-purp {
-  color: #0000ff;
-}
-l {
-  color: #c5c8c6;
-}
-lg {
-  color: #9de9a9;
-}
-sea {
-  color: #93ff4c;
-}
-red {
-color: #dc143c;
-
-}
-red:hover {
-color: #20C20E;
+.glow {
+  
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
 }
 
-/*buttons*/
-
-ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
-background-color: #212121;
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #23272A, 0 0 30px #2E3543, 0 0 40px #3A445E, 0 0 50px #465379, 0 0 60px #546497, 0 0 70px #6072B1;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #6072B1, 0 0 40px #546497, 0 0 50px #465379, 0 0 60px #3A445E, 0 0 70px #2E3543, 0 0 80px #23272A;
+  }
 }
 
-li {
-float: left;
-border-right:1px solid #bbb;
+.bottomleft {
+  position: absolute;
+  top: 825px;
+  left: 1px;
 }
 
-li:last-child {
-border-right: none;
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
-li a {
-display: block;
-color: white;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
-}
-
-li a:hover:not(.active) {
-background-color: #111;
-}
-
-.active {
-background-color: #026641;
-}
-
-/*cursor thing*/
-li{
-cursor: pointer;
-}
-
-.btn {
-  background-color: #2B2D2F;
-  color: #71DFBE
-  border: none;
-  border-radius: 125em;
-  padding: 1em 3em;
-  font-weight: bold;
+.sidebar a {
+  padding: 8px 8px 8px 32px;
   text-decoration: none;
-  background-color: none;
-}
-#rcorners1 {
-    cursor: default;
-    border-radius: 50px 50px 50px 5px;
-    background: #343434;
-    padding: 20px;
-    color: white;
-    min-height: 100px;
-    overflow: hidden;
-  }
-
-  .rounded {
-    border: 1px solid grey;
-  }
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
 
-body {
-    background-color: #111111;
-    background-image: url('http://placekitten.com/1000/1000');
+.sidebar a:hover {
+  color: #f1f1f1;
 }
-button {
-    transition: all .5s ease;
-    color: #fff;
-    border: 3px solid white;
-    font-family:'Montserrat', sans-serif;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 1;
-    font-size: 17px;
-    background-color : transparent;
-    padding: 10px;
-    outline: none;
-    border-radius: 4px;
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
-button:hover {
-    color: #001F3F;
-    background-color: #fff;
-    cursor: pointer;
+
+.sidebar .darkmode {
+  position: absolute;
+  top: 6px;
+  left: 0px;
+  margin-right: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+.feature, .setting {
+  vertical-align: top;
+  width: 620px;
+  display: inline-block;
+}
+
+.smallFeature, .smallSetting{
+  vertical-align: top;
+  width: 300px;
+  display: inline-block;
+}
+
+.inLine {
+  display: inline;
+}
+.center {
+  text-align: center;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }
 
 /* Dashed border */
@@ -249,3 +255,45 @@ h1,
 p {
   color: var(--text-color);
 }
+
+.button {
+display: inline-block;
+outline: none;
+cursor: pointer;
+border-radius: 3px;
+font-size: 14px;
+font-weight: 500;
+line-height: 16px;
+padding: 2px 16px;
+height: 38px;
+min-width: 96px;
+min-height: 38px;
+border: none;
+color: #fff;
+background-color: rgba(94, 108, 255, 0.37);
+transition: background-color .17s ease,color .17s ease;
+}
+
+.button:hover {
+    background-color: rgb(71, 82, 196);
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd2d;
+}
+
+
+
+
